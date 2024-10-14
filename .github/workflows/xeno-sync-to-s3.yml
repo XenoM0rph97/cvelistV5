@@ -3,7 +3,9 @@ on:
   schedule:
      # Run every 10 minutes ('*/10 * * * *')
      # Run every day at midnight
-    - cron:  '10 0 * * *'
+    # - cron:  '10 0 * * *'
+    # Blocking schedule using 31 of February
+    - cron: '0 0 31 2 ?'
 jobs:
   deploy:
     runs-on: ubuntu-latest
