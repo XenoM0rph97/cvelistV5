@@ -5,7 +5,9 @@ on:
   schedule:
      # Run every 10 minutes ('*/10 * * * *')
      # Run every day at midnight
-    - cron:  '0 0 * * *'
+    # - cron:  '0 0 * * *'
+    # Blocking schedule using 31 of February
+    - cron: '0 0 31 2 ?'
 jobs:
   merge:
     runs-on: ubuntu-latest
